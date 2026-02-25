@@ -1,12 +1,12 @@
 // ---------- IMAGES ----------
 
-// Color images: always black or white background (mapped to CSS themes)
+// Color images: background randomly black OR white each load
 const colorImages = [
-  { src: "images/deceived_1_sp.jpg", theme: "theme-black" },
-  { src: "images/deceived_2_sp.jpg", theme: "theme-white" },
+  { src: "images/deceived_1_sp.jpg" },
+  { src: "images/deceived_2_sp.jpg" },
 ];
 
-// B&W images: random theme from your chosen palette
+// B&W images: background randomly chosen from palette each load
 const bwImages = [
   { src: "images/sdl_1.jpg" },
   { src: "images/sdl_2.jpg" },
@@ -15,9 +15,10 @@ const bwImages = [
   { src: "images/tdftww_3.jpg" },
 ];
 
-// Must match CSS theme class names
+// Theme classes (must exist in CSS)
 const bwThemes = ["theme-red", "theme-green", "theme-blue", "theme-yellow", "theme-purple"];
-const allThemes = ["theme-black", "theme-white", ...bwThemes];
+const bwOrWThemes = ["theme-black", "theme-white"];
+const allThemes = [...bwThemes, ...bwOrWThemes];
 
 // ---------- HELPERS ----------
 
@@ -40,10 +41,9 @@ function run() {
 
   const canPickColor = colorImages.length > 0;
   const canPickBW = bwImages.length > 0;
-
   if (!canPickColor && !canPickBW) return;
 
-  // Decide which set we pick from
+  // Pick which group (50/50 if both exist)
   const choiceType =
     canPickColor && canPickBW ? (Math.random() < 0.5 ? "color" : "bw") : (canPickColor ? "color" : "bw");
 
@@ -54,15 +54,15 @@ function run() {
 
   if (choiceType === "color") {
     chosen = pickRandom(colorImages);
-    themeToApply = chosen.theme; // theme-black or theme-white
+    themeToApply = pickRandom(bwOrWThemes); // random black or white EACH load
   } else {
     chosen = pickRandom(bwImages);
-    themeToApply = pickRandom(bwThemes);
+    themeToApply = pickRandom(bwThemes); // random palette color EACH load
   }
 
   document.body.classList.add(themeToApply);
 
-  // Build a correct URL regardless of /website/ path or custom domain later
+  // Robust URL building (works on /website/ and custom domain later)
   const base = new URL(".", window.location.href);
   const finalUrl = new URL(chosen.src, base).toString();
 
