@@ -28,11 +28,11 @@ body {
 .theme-black { background: #000000; color: #ffffff; }
 .theme-white { background: #ffffff; color: #000000; }
 
-.theme-red    { background: #cc3300; color: #ffffff; }
-.theme-green  { background: #00e600; color: #000000; }
-.theme-blue   { background: #007acc; color: #ffffff; }
-.theme-yellow { background: #dfcd07; color: #000000; }
-.theme-purple { background: #aa80ff; color: #000000; }
+.theme-red    { background: #1a0000; color: #ffffff; }
+.theme-green  { background: #001a00; color: #000000; }
+.theme-blue   { background: #000d1a; color: #ffffff; }
+.theme-yellow { background: #0f0f0a; color: #000000; }
+.theme-purple { background: #1a001a; color: #000000; }
 
 /* ========================= */
 /* Header */
@@ -165,3 +165,4 @@ body {
     order: 2;
   }
 }
+
