@@ -1,3 +1,5 @@
+body { background: hotpink !important; }
+#heroImage { border: 10px solid yellow !important; }
 /* ========================= */
 /* Global Reset */
 /* ========================= */
@@ -96,3 +98,4 @@ body {
 .email:hover {
   border-bottom-color: var(--underlineHoverColor, rgba(255,255,255,0.8));
 }
+
