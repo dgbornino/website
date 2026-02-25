@@ -26,31 +26,31 @@ body {
 
 /* Dark red */
 .theme-red {
-  background: #4d1919;
+  background: #330000;
   color: #ffffff;
 }
 
 /* Bright green */
 .theme-green {
-  background: #003300;
+  background: #001a00;
   color: #ffffff;
 }
 
 /* Blue */
 .theme-blue {
-  background: #002266;
+  background: #001a4d;
   color: #ffffff;
 }
 
 /* Yellow */
 .theme-yellow {
-  background: #3d3d29;
+  background: #1f1f14;
   color: #ffffff;
 }
 
 /* Purple */
 .theme-purple {
-  background: #4d004d;
+  background: #330033;
   color: #ffffff;
 }
 
@@ -166,6 +166,7 @@ body {
     order: 2;
   }
 }
+
 
 
 
