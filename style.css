@@ -18,47 +18,24 @@ html, body {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ========================= */
 /* COLOR THEMES */
 /* ========================= */
 
-/* Dark red */
-.theme-red {
-  background: #330000;
-  color: #ffffff;
-}
-
-/* Bright green */
-.theme-green {
-  background: #001a00;
-  color: #ffffff;
-}
-
-/* Blue */
-.theme-blue {
-  background: #001a4d;
-  color: #ffffff;
-}
-
-/* Yellow */
-.theme-yellow {
-  background: #1f1f14;
-  color: #ffffff;
-}
-
-/* Purple */
-.theme-purple {
-  background: #330033;
-  color: #ffffff;
-}
-
 .theme-black { background: #000000; color: #ffffff; }
 .theme-white { background: #ffffff; color: #000000; }
 
+.theme-red    { background: #cc3300; color: #ffffff; }
+.theme-green  { background: #00e600; color: #000000; }
+.theme-blue   { background: #007acc; color: #ffffff; }
+.theme-yellow { background: #dfcd07; color: #000000; }
+.theme-purple { background: #aa80ff; color: #000000; }
+
 /* ========================= */
-/* Main Name (Mono) */
+/* Header */
 /* ========================= */
 
 .top-left {
@@ -75,7 +52,7 @@ body {
 }
 
 /* ========================= */
-/* Footer (Sans) */
+/* Footer */
 /* ========================= */
 
 .bottom {
@@ -109,21 +86,22 @@ body {
 }
 
 /* ========================= */
-/* Center Image */
+/* Center Image (Pinned Layout) */
 /* ========================= */
 
 .center {
-  min-height: 100vh;
+  position: fixed;
+  inset: 0;
   display: grid;
   place-items: center;
 
-  /* define fixed header/footer safe spacing */
+  /* Safe spacing for header + footer */
+  padding-top: 120px;
+  padding-bottom: 120px;
   padding-left: 32px;
   padding-right: 32px;
 
-  /* equal top/bottom padding = true vertical centering */
-  padding-top: 96px;
-  padding-bottom: 96px;
+  pointer-events: none; /* prevents drag-shift feeling */
 }
 
 #heroImage {
@@ -132,6 +110,8 @@ body {
   height: auto;
   object-fit: contain;
   border-radius: 0;
+
+  pointer-events: auto;
 }
 
 /* ========================= */
@@ -140,16 +120,35 @@ body {
 
 @media (max-width: 768px) {
 
+  .top-left {
+    top: 12px;
+    left: 12px;
+  }
+
+  .bottom {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
   .center {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    pointer-events: none;
+  }
 
   #heroImage {
     width: 100%;
     max-width: 100%;
+    pointer-events: auto;
   }
 
   .footer-inner {
@@ -166,7 +165,3 @@ body {
     order: 2;
   }
 }
-
-
-
-
