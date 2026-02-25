@@ -54,6 +54,9 @@ body {
   color: #000000;
 }
 
+.theme-black { background: #000000; color: #ffffff; }
+.theme-white { background: #ffffff; color: #000000; }
+
 /* ========================= */
 /* Main Name (Mono) */
 /* ========================= */
@@ -159,3 +162,4 @@ body {
     order: 2;
   }
 }
+
