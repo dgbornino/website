@@ -19,10 +19,12 @@ body {
 }
 
 .top-left {
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  padding: 0;
+  position: fixed !important;
+  top: 6px !important;
+  left: 6px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
 }
 
 .name {
@@ -69,3 +71,4 @@ body {
   border-bottom-color: rgba(255,255,255,0.8);
 
 }
+
