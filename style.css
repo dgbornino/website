@@ -19,12 +19,15 @@ body {
 }
 
 .top-left {
-  padding: var(--pad);
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  padding: 0;
 }
 
 .name {
+  font-family: "Space Mono", monospace;
   font-size: 18px;
-  letter-spacing: 0.2px;
 }
 
 .center {
@@ -64,4 +67,5 @@ body {
 
 .email:hover {
   border-bottom-color: rgba(255,255,255,0.8);
+
 }
