@@ -116,10 +116,14 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
+
+  /* define fixed header/footer safe spacing */
   padding-left: 32px;
   padding-right: 32px;
+
+  /* equal top/bottom padding = true vertical centering */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 #heroImage {
@@ -137,11 +141,11 @@ body {
 @media (max-width: 768px) {
 
   .center {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
   #heroImage {
     width: 100%;
@@ -162,4 +166,5 @@ body {
     order: 2;
   }
 }
+
 
