@@ -2,18 +2,18 @@
 
 // 1) Color images: each one picks ONLY black or white background (you decide per image)
 const colorImages = [
-  { src: "deceived_1_sp.jpg", bg: "#000000" }, // black
-  { src: "deceived_2_sp.jpg", bg: "#ffffff" }, // white
+  { src: "images/deceived_1_sp.jpg", bg: "#000000" }, // black
+  { src: "images/deceived_2_sp.jpg", bg: "#ffffff" }, // white
   // add more: { src: "images/color-3.jpg", bg: "#000000" },
 ];
 
 // 2) B&W images: background is RANDOM, chosen from the palette below
 const bwImages = [
-  { src: "sdl_1.jpg" },
-  { src: "sdl_2.jpg" },
-  { src: "tdftww_1.jpg" },
-  { src: "tdftww_2.jpg" },
-  { src: "tdftww_3.jpg" },
+  { src: "images/sdl_1.jpg" },
+  { src: "images/sdl_2.jpg" },
+  { src: "images/tdftww_1.jpg" },
+  { src: "images/tdftww_2.jpg" },
+  { src: "images/tdftww_3.jpg" },
   // add more: { src: "images/bw-3.jpg" },
 ];
 
@@ -82,5 +82,6 @@ function run() {
   const img = document.getElementById("heroImage");
   img.src = chosen.src;
 }
+
 
 run();
