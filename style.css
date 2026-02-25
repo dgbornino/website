@@ -131,3 +131,40 @@ html, body {
   .footer-inner div { order: 2; }
 }
 
+/* ========================= */
+/* Mobile Landscape Fix */
+/* ========================= */
+@media (max-width: 932px) and (orientation: landscape) {
+  .top-left {
+    top: 8px;
+    left: 8px;
+  }
+
+  .bottom {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .center {
+    padding: 56px 10px; /* much smaller vertical padding */
+  }
+
+  .image-frame {
+    height: 58vh;       /* shorter image so it doesn't collide with footer */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #heroImage {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .footer-inner {
+    gap: 4px;
+    font-size: 12px;    /* small enough to fit */
+  }
+}
+
+
