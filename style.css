@@ -1,0 +1,67 @@
+:root {
+  --pad: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #111;
+  color: #fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.top-left {
+  padding: var(--pad);
+}
+
+.name {
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  padding: var(--pad);
+}
+
+#heroImage {
+  max-width: min(720px, 86vw);
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.bottom {
+  padding: var(--pad);
+}
+
+.footer-inner {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.email {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+.email:hover {
+  border-bottom-color: rgba(255,255,255,0.8);
+}
