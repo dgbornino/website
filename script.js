@@ -19,11 +19,11 @@ const bwImages = [
 
 // Choose the ONLY colors you allow for B&W backgrounds:
 const bwBackgroundPalette = [
-  "#ff3b30",
-  "#34c759",
-  "#007aff",
-  "#ffcc00",
-  "#af52de"
+  "#cc3300",
+  "##00e600",
+  "#007acc",
+  "#dfcd07",
+  "#aa80ff"
 ];
 
 // ---------- NO NEED TO EDIT BELOW (unless you want to) ----------
@@ -86,5 +86,6 @@ img.src = new URL(chosen.src, base).toString();
 
 
 run();
+
 
 
