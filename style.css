@@ -26,32 +26,32 @@ body {
 
 /* Dark red */
 .theme-red {
-  background: #cc3300;
+  background: #4d1919;
   color: #ffffff;
 }
 
 /* Bright green */
 .theme-green {
-  background: #00e600;
-  color: #000000;
+  background: #003300;
+  color: #ffffff;
 }
 
 /* Blue */
 .theme-blue {
-  background: #007acc;
+  background: #002266;
   color: #ffffff;
 }
 
 /* Yellow */
 .theme-yellow {
-  background: #dfcd07;
-  color: #000000;
+  background: #3d3d29;
+  color: #ffffff;
 }
 
 /* Purple */
 .theme-purple {
-  background: #aa80ff;
-  color: #000000;
+  background: #4d004d;
+  color: #ffffff;
 }
 
 .theme-black { background: #000000; color: #ffffff; }
@@ -166,5 +166,6 @@ body {
     order: 2;
   }
 }
+
 
 
