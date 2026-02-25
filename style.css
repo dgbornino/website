@@ -20,11 +20,10 @@ body {
   min-height: 100vh;
   background: #111;
   color: var(--textColor, #ffffff);
-  font-family: "Space Mono", monospace;
 }
 
 /* ========================= */
-/* Name (Top Left) */
+/* Main Name (Mono) */
 /* ========================= */
 
 .top-left {
@@ -35,12 +34,13 @@ body {
 }
 
 .name {
+  font-family: "Space Mono", monospace;
   font-size: 18px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
 }
 
 /* ========================= */
-/* Footer */
+/* Footer (Sans Serif) */
 /* ========================= */
 
 .bottom {
@@ -55,6 +55,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   font-size: 14px;
   gap: 16px;
   flex-wrap: wrap;
@@ -80,21 +81,20 @@ body {
   display: grid;
   place-items: center;
 
-  /* space so image doesn't collide with fixed header/footer */
   padding-top: 120px;
   padding-bottom: 120px;
   padding-left: 32px;
   padding-right: 32px;
 }
 
-/* ===== Desktop Image ===== */
+/* Desktop Image (2/3 width) */
 
 #heroImage {
-  width: 66vw;          /* 2/3 of viewport width */
-  max-width: 1400px;    /* prevents ultra-wide explosion */
+  width: 66vw;
+  max-width: 1400px;
   height: auto;
   object-fit: contain;
-  border-radius: 0;     /* square corners */
+  border-radius: 0;
 }
 
 /* ========================= */
@@ -117,12 +117,12 @@ body {
   .center {
     padding-top: 90px;
     padding-bottom: 90px;
-    padding-left: 10px;   /* tiny side margins */
+    padding-left: 10px;
     padding-right: 10px;
   }
 
   #heroImage {
-    width: 100%;        /* as big as possible */
+    width: 100%;
     max-width: 100%;
   }
 }
